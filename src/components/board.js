@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import squareFactory from "./squareFactory";
 
-const rowArray = ["a", 'b', 'c', 'd', 'e', 'f', 'g', 'h'];
+const rowArray = ["a", "b", "c", "d", "e", "f", "g", "h"];
 
 const StyledBoard = styled.div`
   background-color: yellow;
@@ -11,9 +11,9 @@ const StyledBoard = styled.div`
 
 export default function Board() {
   return (
-    <StyledBoard className = 'board'>
+    <StyledBoard className="board">
       {rowArray.map((row) => {
-        return squareFactory();
+        return squareFactory(row);
       })}
     </StyledBoard>
   );

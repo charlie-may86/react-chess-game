@@ -8,14 +8,14 @@ const StyledSquare = styled.div`
   display: flex;
 `;
 
-const rowArray = [1, 2, 3, 4, 5, 6, 7, 8];
+const rowArray = ['square-eight', 'square-seven', 'square-six', 'square-five', 'square-four', 'square-three', 'square-two', 'square-one'];
 
-export default function Square() {
+export default function Square(className) {
   return (
-    <div>
+    <div className = {className}>
       {rowArray.map((row) => {
         return (
-          <StyledSquare>
+          <StyledSquare className = {[row, className]}>
             <img src={square} alt="chess square" />
           </StyledSquare>
         );
