@@ -19,12 +19,22 @@ const rowArray = [
   "square-one",
 ];
 
-export default function Square(className) {
+export default function Square(className, number) {
   return (
     <div className={className}>
       {rowArray.map((row) => {
+        let x = "";
+        if (rowArray.indexOf(row) % 2 === 1 && number % 2 === 1) {
+          x = "light";
+        } else if (rowArray.indexOf(row) % 2 === 1 && number % 2 === 0) {
+          x = "dark";
+        } else if (rowArray.indexOf(row) % 2 === 0 && number % 2 === 1) {
+          x = "dark";
+        } else if (rowArray.indexOf(row) % 2 === 0 && number % 2 === 0) {
+          x = "light";
+        }
         return (
-          <StyledSquare className={[row, className]}>
+          <StyledSquare className={[className, row, x]}>
             <img src={square} alt="chess square" />
           </StyledSquare>
         );

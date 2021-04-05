@@ -2,25 +2,27 @@ import React from "react";
 import styled from "styled-components";
 import squareFactory from "./squareFactory";
 
-const rowArray = ["a", "b", "c", "d", "e", "f", "g", "h"];
+const rowArray = ["row-a", "row-b", "row-c", "row-d", "row-e", "row-f", "row-g", "row-h"];
 
 const StyledBoard = styled.div`
   background-color: yellow;
   display: inline-flex;
 
-  .a .dark {
+  .dark {
     background-color: ${(pr) => pr.theme.darkColor};
   }
-  .b .light {
-    background-color: pink;
+
+  .light {
+      background-color: ${(pr) => pr.theme.lightColor};
   }
+
 `;
 
 export default function Board() {
   return (
     <StyledBoard className="board">
-      {rowArray.map((row) => {
-        return squareFactory(row);
+      {rowArray.map((className) => {
+        return squareFactory(className, rowArray.indexOf(className));
       })}
     </StyledBoard>
   );
