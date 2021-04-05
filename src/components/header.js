@@ -15,5 +15,6 @@ export default function header() {
       <h1>Around the Board</h1>
       <h2>A Chess Board Memorization Game</h2>
     </StyledHeader>
+    
   );
 }
