@@ -7,6 +7,13 @@ const rowArray = ["a", "b", "c", "d", "e", "f", "g", "h"];
 const StyledBoard = styled.div`
   background-color: yellow;
   display: inline-flex;
+
+  .a .dark {
+    background-color: ${(pr) => pr.theme.darkColor};
+  }
+  .b .light {
+    background-color: pink;
+  }
 `;
 
 export default function Board() {
