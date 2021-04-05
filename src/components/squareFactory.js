@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import square from '../images/box.png';
 
 const StyledSquare = styled.div`
   border: 1px solid black;
@@ -7,10 +8,12 @@ const StyledSquare = styled.div`
   display: inline-block;
 `;
 
-export default function square() {
+console.log(square)
+
+export default function Square() {
   return (
     <StyledSquare>
-      <img src="src/images/box.png" />
+      <img src={square} alt='chess square'/>
     </StyledSquare>
   );
 }
