@@ -1,12 +1,12 @@
 import "./App.css";
 import Header from "./components/header";
-import Square from "./components/squareFactory";
+import Board from "./components/board";
 
 function App() {
   return (
     <div>
       <Header />
-      <Square />
+      <Board />
     </div>
   );
 }
